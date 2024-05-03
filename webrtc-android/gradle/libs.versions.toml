@@ -22,6 +22,9 @@ retrofit = "2.9.0"
 retrofitResultAdapter = "1.0.9"
 retrofitKotlinxSerializationJson = "1.0.0"
 spotless = "6.7.0"
+constraint_layout = "2.1.4"
+androidx-recyclerview = "1.2.1"
+
 
 [libraries]
 webrtc = { group = "io.getstream", name = "stream-webrtc-android", version.ref = "webrtc" }
@@ -51,6 +54,9 @@ okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor",
 retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-result-adapter = { group = "com.github.skydoves", name = "retrofit-adapters-result", version.ref = "retrofitResultAdapter" }
 retrofit-kotlin-serialization = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofitKotlinxSerializationJson" }
+androidx_constraint_layout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraint.layout" }
+androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "androidx-recyclerview" }
+guavaAndroid = { module = "com.google.guava:guava", version = "31.1-android" }
 
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }

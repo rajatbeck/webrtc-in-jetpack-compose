@@ -31,6 +31,7 @@ android {
   buildFeatures {
     compose = true
     buildConfig = true
+    viewBinding = true
   }
 
   composeOptions {
@@ -49,6 +50,8 @@ android {
 }
 
 dependencies {
+
+  implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
   // compose
   implementation(libs.androidx.activity.compose)
   implementation(libs.androidx.compose.runtime)
@@ -59,6 +62,7 @@ dependencies {
   implementation(libs.androidx.compose.foundation.layout)
   implementation(libs.androidx.compose.ui.tooling.preview)
   implementation(libs.androidx.compose.constraintlayout)
+
 
   // image loading
   implementation(libs.landscapist.glide)
@@ -72,4 +76,12 @@ dependencies {
 
   // logger
   implementation(libs.stream.log)
+
+  //arx
+  implementation(libs.androidx.appcompat)
+  implementation(libs.androidx.constraint.layout)
+  implementation(libs.androidx.recyclerview)
+  implementation(libs.guavaAndroid)
+  api(files("libs/arxcameraapi-release.aar"))
+  api(files("libs/arxui-release.aar"))
 }
