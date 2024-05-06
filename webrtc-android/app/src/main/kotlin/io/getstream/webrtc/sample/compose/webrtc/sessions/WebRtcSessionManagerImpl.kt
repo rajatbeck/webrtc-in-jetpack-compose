@@ -88,7 +88,7 @@ class WebRtcSessionManagerImpl(
   }
 
   // getting front camera
-  private val videoCapturer: VideoCapturer by lazy { buildCameraCapturer() }
+  private val videoCapturer: VideoCapturer by lazy { BitmapFrameCapturer() }
   private val cameraManager by lazy { context.getSystemService<CameraManager>() }
   private val cameraEnumerator: Camera2Enumerator by lazy {
     Camera2Enumerator(context)
@@ -114,7 +114,7 @@ class WebRtcSessionManagerImpl(
   private val videoSource by lazy {
     peerConnectionFactory.makeVideoSource(videoCapturer.isScreencast).apply {
       videoCapturer.initialize(surfaceTextureHelper, context, this.capturerObserver)
-      videoCapturer.startCapture(resolution.width, resolution.height, 30)
+      videoCapturer.startCapture(1280, 720, 30)
     }
   }
 

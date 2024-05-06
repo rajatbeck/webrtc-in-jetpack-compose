@@ -79,6 +79,7 @@ class MainActivity : ComponentActivity() {
             if (!onCallScreen) {
               StageScreen(state = state) { onCallScreen = true }
             } else {
+
               VideoCallScreen()
             }
           }
